@@ -1,0 +1,17 @@
+{
+  "name": "todo-app-nodefetch",
+  "version": "1.0.0",
+  "author": "WiZiSergio",
+  "license": "MIT",
+  "description": "ToDo List App con node-fetch, Express y localStorage",
+  "main": "server.js",
+  "type": "module",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.21.2",
+    "node-fetch": "^3.3.2"
+  }
+}
