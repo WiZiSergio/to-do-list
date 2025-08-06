@@ -8,6 +8,8 @@
 8. styles.css (Estilos básicos y responsive)
 9. package.json
 10. tasks.json
+
+
 Resumen flujo de datos (Data Flow)
 El servidor Express lee/escribe las tareas en tasks.json
 
