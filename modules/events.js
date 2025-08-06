@@ -6,7 +6,6 @@ export function initEvents() {
   const input = document.getElementById('task-input');
   const list = document.getElementById('task-list');
 
-  // Referencias al modal y sus controles
   const modal = document.getElementById('edit-modal');
   const editInput = document.getElementById('edit-input');
   const saveBtn = document.getElementById('save-btn');
@@ -14,7 +13,6 @@ export function initEvents() {
 
   let currentEditId = null;
 
-  // Crear tarea
   form.addEventListener('submit', async (e) => {
     e.preventDefault();
     const title = input.value.trim();
@@ -24,7 +22,6 @@ export function initEvents() {
     input.value = '';
   });
 
-  // Delegación eventos en lista
   list.addEventListener('click', async (e) => {
     const li = e.target.closest('li');
     const id = li?.dataset?.id;
@@ -35,7 +32,6 @@ export function initEvents() {
     }
 
     if (e.target.classList.contains('edit-btn')) {
-      // Abrir modal y rellenar input con texto actual
       currentEditId = id;
       editInput.value = li.querySelector('span').textContent;
       modal.classList.remove('hidden');
@@ -47,7 +43,6 @@ export function initEvents() {
     }
   });
 
-  // Guardar cambios desde modal
   saveBtn.addEventListener('click', async () => {
     const newTitle = editInput.value.trim();
     if (!newTitle) {
@@ -63,13 +58,11 @@ export function initEvents() {
     }
   });
 
-  // Cancelar edición
   cancelBtn.addEventListener('click', () => {
     modal.classList.add('hidden');
     currentEditId = null;
   });
 
-  // Cerrar modal al pulsar ESC
   window.addEventListener('keydown', (e) => {
     if (e.key === 'Escape' && !modal.classList.contains('hidden')) {
       modal.classList.add('hidden');
