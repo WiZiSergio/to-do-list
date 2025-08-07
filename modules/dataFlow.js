@@ -1,6 +1,6 @@
 // dataFlow.js centraliza el flujo de datos: carga, crea, edita, elimina y actualiza UI
 
-import { fetchTasks, addTask, editTask, removeTask } from './api.js';
+import { addTask, editTask, removeTask } from './api.js';
 import { renderTasks } from './dom.js';
 
 export const flow = {
