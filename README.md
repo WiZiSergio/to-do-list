@@ -1,45 +1,24 @@
-# 📋 To-Do List App (Node.js + Express + node-fetch + localStorage)
+# To‑Do List (Full project)
 
-## 🚀 Funcionalidades
-- **Crear tareas** con fecha y hora de creación.
-- **Editar tareas** en un modal sin recargar la página.
-- **Eliminar tareas** con confirmación mediante pop-up.
-- **Marcar tareas como completadas**.
-- **Persistencia**:
-  - Datos guardados en **`tasks.json`** en el servidor.
-  - Respaldo automático en **localStorage** si falla la conexión.
-- **Diseño responsive** y adaptado para móviles.
-- **Flujo de datos documentado** en el código.
+## Briefing
+Aplicación To‑Do List con frontend modular (HTML/CSS/JS) y backend en Node.js + Express.
+Soporta crear, editar y eliminar tareas. Cada tarea contiene fecha de creación y se guarda en el backend.
+Si la API no está disponible, el frontend usa localStorage como respaldo.
 
----
+## Estructura
+- frontend/: cliente (abrir frontend/index.html)
+- backend/: backend (node server.mjs)
+- screenshots/: imágenes de ejemplo
 
-## 🛠️ Tecnologías usadas
-### Frontend
-- HTML5
-- CSS3
-- JavaScript (ES Modules)
-- Fetch API
+## Quickstart
+1. Instalar backend
+   ```bash
+   cd backend
+   npm install
+   npm start
+   ```
+2. Abrir `frontend/index.html` en el navegador (usar Live Server o abrir archivo).
 
-### Backend
-- Node.js
-- Express
-- node-fetch
-- CORS
-
----
-
-## 📂 Estructura del proyecto
-
-todo-app/
-│
-├── public/
-│ ├── index.html # Interfaz principal
-│ ├── style.css # Estilos globales y modales
-│ ├── events.js # Gestión de eventos de la UI
-│ ├── api.js # Comunicación con el backend
-│ └── flow.js # Representación funcional del flujo de datos
-│
-├── tasks.json # Base de datos de tareas (en servidor)
-├── server.js # Servidor Express con CRUD
-├── package.json # Configuración del proyecto
-└── README.md # Documentación del proyecto
+## Notas
+- El backend usa almacenamiento en memoria (no persistente). Para producción, sustituir por DB.
+- README incluye dos SVG de muestra en screenshots/.
